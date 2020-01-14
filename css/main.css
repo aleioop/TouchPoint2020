@@ -89,14 +89,15 @@ textarea {
 }
 
 #circle-container{
-  width: 50%;
-  height: 100vh;
-  border: 2px solid red;
+  width: 43%;
+  height: 100%;
+  margin: auto;
+  padding-top: 4rem;
 }
 #full-circ {
   border-radius: 50%;
-  width: 100px;
-
+  width: 100%;
+  display: block;
   background-color: #2091D0;
   padding-bottom: 100%;
 }
