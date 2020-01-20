@@ -79,7 +79,7 @@ textarea {
   justify-content: center;
   align-items: flex-end;
   width: 40vw;
-  min-height: 85vh;
+  min-height: 92vh;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   justify-self: center;
@@ -97,16 +97,24 @@ textarea {
 }
 
 .subtitle-container .main-title {
-  font-size: 3rem;
-  font-family: Futura;
-  font-weight: 100;
+  font-size: 2.75rem;
+  font-family: Nordique Pro;
+  font-weight: 600;
+}
+
+.subtitle-container .subtitle {
+  font-size: 2.75rem;
+  font-family: Nordique Pro;
+  font-weight: 400;
+  margin-left: 0.75rem;
 }
 
 #main-blurb{
   grid-column: 3 / 4;
   font-size: 1rem;
+  font-family: Nordique Pro;
+  font-weight: 400;
 }
-
 
 .shape-contain .shape {
   display: block;
@@ -114,48 +122,88 @@ textarea {
   bottom: 0;
 }
 
-.shape-contain #full-circ {
+#full-circ {
   fill: #0093DA;
-}
-
-.shape-contain #full-circ:hover {
-  fill: red;
-}
-
-.shape-contain #pacman {
+}\
+#pacman {
   fill: #005EB8;
 }
 
-.shape-contain #pacman:hover{
+#semi-circ{
+  fill: #DB3EB1
+}
+
+#qrtr-circ{
+  fill: #FF6720;
+}
+
+/* outer hover */
+#full-circ.fullhover {
+  fill: #4490CA;
+}
+
+#pacman.fullhover{
+  fill: #CDD2E9;
+}
+
+#semi-circ.fullhover{
+  fill: #EAD8E7
+}
+
+#qrtr-circ.fullhover{
+  fill: #F8DDCA;
+}
+
+/* pacman hover */
+#full-circ.pachover {
+  fill: #D6E1F2;
+}
+
+#pacman.pachover{
   fill: #4E5FAB;
 }
 
-/* .shape-contain .full-circ:hover{
-  fill: black;
-  pointer-events: all;
+#semi-circ.pachover{
+  fill: #EAD8E7;
 }
 
-.shape-contain .pacman {
-  fill: #005EB8;
-  transform-origin: center;
-  transform: translate(8%, 8%);
-  pointer-events: all;
+#qrtr-circ.pachover{
+  fill: #F8DDCA;
 }
 
-.shape-contain .semi-circ {
-   fill: #DB3EB1;
-   transform-origin: center;
-   transform: translate(6%, 28.5%);
-   pointer-events: all;
+/* semi circle hover */
+#full-circ.semihover {
+  fill: #D6E1F2;
 }
 
-.shape-contain .qrtr-circ {
-   fill: #FF6720;
-   transform-origin: center;
-   transform: translate(24.5%, 50%);
-   pointer-events: all;
-} */
+#pacman.semihover{
+  fill: #CDD2E9;
+}
 
+#semi-circ.semihover{
+  fill: #BB5698;
+}
+
+#qrtr-circ.semihover{
+  fill: #F8DDCA;
+}
+
+/* qrtr circle hover */
+#full-circ.qrtrhover {
+  fill: #D6E1F2;
+}
+
+#pacman.qrtrhover{
+  fill: #CDD2E9;
+}
+
+#semi-circ.qrtrhover{
+  fill: #EAD8E7;
+}
+
+#qrtr-circ.qrtrhover{
+  fill: #E26F3B;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
