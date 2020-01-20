@@ -66,41 +66,96 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.header-content{
-  width: 100vw;
-  display: inline-grid;
-  grid-template-columns: 50% 50%;
+.main-container {
+  display: grid;
+  grid-column-gap: 23px;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 50px auto 1fr;
+  margin: 40px;
 }
 
-.header-content .main-title {
-  text-align: right;
-  font-size: 2rem;
+.shape-contain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 40vw;
+  min-height: 85vh;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: end;
+  position: relative;
 
 }
 
-.header-content .subtitle{
-  margin-left: 2rem;
+.subtitle-container {
+  grid-column: 2/3;
 }
 
-.header-content .blurb{
+.subtitle-container .main-title, .subtitle-container .subtitle{
+  display: inline;
+}
+
+.subtitle-container .main-title {
+  font-size: 3rem;
+  font-family: Futura;
+  font-weight: 100;
+}
+
+#main-blurb{
+  grid-column: 3 / 4;
   font-size: 1rem;
-  margin-left: 30%;
-  margin-right: 3rem;
 }
 
-#circle-container{
-  width: 43%;
-  height: 100%;
-  margin: auto;
-  padding-top: 4rem;
-}
-#full-circ {
-  border-radius: 50%;
-  width: 100%;
+
+.shape-contain .shape {
   display: block;
-  background-color: #2091D0;
-  padding-bottom: 100%;
+  position: absolute;
+  bottom: 0;
 }
+
+.shape-contain #full-circ {
+  fill: #0093DA;
+}
+
+.shape-contain #full-circ:hover {
+  fill: red;
+}
+
+.shape-contain #pacman {
+  fill: #005EB8;
+}
+
+.shape-contain #pacman:hover{
+  fill: #4E5FAB;
+}
+
+/* .shape-contain .full-circ:hover{
+  fill: black;
+  pointer-events: all;
+}
+
+.shape-contain .pacman {
+  fill: #005EB8;
+  transform-origin: center;
+  transform: translate(8%, 8%);
+  pointer-events: all;
+}
+
+.shape-contain .semi-circ {
+   fill: #DB3EB1;
+   transform-origin: center;
+   transform: translate(6%, 28.5%);
+   pointer-events: all;
+}
+
+.shape-contain .qrtr-circ {
+   fill: #FF6720;
+   transform-origin: center;
+   transform: translate(24.5%, 50%);
+   pointer-events: all;
+} */
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
