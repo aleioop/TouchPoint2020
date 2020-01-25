@@ -1,8 +1,9 @@
-(function () {
-  var fullcirc = $("#full-circ").get();
-  var pacman = $("#pacman").get();
-  var semicirc = $("#semi-circ").get();
-  var qrtrcirc = $("#qrtr-circ").get();
+$(document).ready(function(){
+  const fullcirc = $("#full-circ").get();
+  const pacman = $("#pacman").get();
+  const semicirc = $("#semi-circ").get();
+  const qrtrcirc = $("#qrtr-circ").get();
+  var speakersList = document.querySelectorAll(".speaker");
 
   $("#full-circ").hover(function(){
     $(this).toggleClass("fullhover");
@@ -36,4 +37,11 @@
     $("#sub-info").toggleClass("hidden");
   });
 
-})();
+  for(let i=0; i<speakersList.length; i++){
+    $(speakersList[i]).hover(function(){
+      console.log("word");
+      $(this).find("subtitle").toggleClass("invisible");
+    });
+  }
+
+});
