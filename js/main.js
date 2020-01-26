@@ -3,6 +3,7 @@ $(document).ready(function(){
   const pacman = $("#pacman").get();
   const semicirc = $("#semi-circ").get();
   const qrtrcirc = $("#qrtr-circ").get();
+  const arrow = $("#arrow-path").get();
   var speakersList = document.querySelectorAll(".speaker");
 
   $("#full-circ").hover(function(){
@@ -36,6 +37,10 @@ $(document).ready(function(){
     $(fullcirc).toggleClass("qrtrhover");
     $("#sub-info").toggleClass("hidden");
   });
+
+  arrow.hover(function(){
+    $(this).toggleClass("hovered");
+  })
 
   for(let i=0; i<speakersList.length; i++){
     $(speakersList[i]).hover(function(){
