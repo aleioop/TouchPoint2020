@@ -38,15 +38,11 @@ $(document).ready(function(){
     $("#sub-info").toggleClass("hidden");
   });
 
-  arrow.hover(function(){
-    $(this).toggleClass("hovered");
-  })
-
-  for(let i=0; i<speakersList.length; i++){
-    $(speakersList[i]).hover(function(){
-      console.log("word");
-      $(this).find("subtitle").toggleClass("invisible");
-    });
-  }
+  // for(let i=0; i<speakersList.length; i++){
+  //   $(speakersList[i]).hover(function(){
+  //     console.log("word");
+  //     $(this).find("subtitle").toggleClass("invisible");
+  //   });
+  // }
 
 });
