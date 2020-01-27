@@ -73,61 +73,173 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   .main-container {
+     display: grid;
+     grid-column-gap: 14px;
+     grid-template-columns: min-content 1fr 1fr;
+     grid-template-rows: 50px 1fr;
+     padding: 40px;
+     width: 100%;
+     height: 100vh;
+   }
 
-.main-container {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 50px 1fr;
-  padding: 40px;
-  width: 100%;
-  height: 100vh;
-}
+   .shape-contain {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     width: 65vw;
+     min-height: 80vh;
+     grid-column: 1 / 4;
+     grid-row: 2 / 3;
+     justify-self: center;
+     align-self: end;
+     position: relative;
+   }
+
+   .shape-contain .shape {
+     display: block;
+     position: absolute;
+     top: 30%;
+     bottom: auto;
+   }
+
+   .shape a:hover, .shape a:active, .shape a:focus {
+      outline: 0;
+   }
+
+   .subtitle-container {
+     grid-column: 2 / 3;
+     display: inline-block;
+     margin-block-start: 1em;
+     margin-block-end: 1em;
+   }
+
+   .subtitle-container .main-title, .subtitle-container .subtitle{
+     display: inline;
+   }
+
+   .subtitle-container .main-title {
+     font-size: 1.5rem;
+     font-family: Nordique Pro;
+     font-weight: 600;
+     display: inline-block;
+     margin: 0;
+   }
+
+   .subtitle-container .subtitle {
+     font-size: 1.5rem;
+     font-family: Nordique Pro;
+     font-weight: 400;
+     display: inline-block;
+     margin: 0;
+   }
 
 
-.shape-contain {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 40vw;
-  min-height: 80vh;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  justify-self: center;
-  align-self: end;
-  position: relative;
-}
+   #main-blurb{
+     grid-column: 3 / 4;
+     font-size: 0.9rem;
+     font-family: Nordique Pro;
+     font-weight: 400;
+   }
 
-.shape-contain .shape {
-  display: block;
-  position: absolute;
-  bottom: -5%;
-}
+   #sub-default{
+     display: none;
+   }
 
-.subtitle-container {
-  grid-column: 2 / 3;
-  display: inline-block;
-}
+   @media only screen and (min-width: 600px) {
+     /* For tablets: */
+     .main-container {
+       grid-template-columns: 1fr auto 1fr;
+       padding: 40px;
+     }
 
-.subtitle-container .main-title, .subtitle-container .subtitle{
-  display: inline;
-}
+     .shape-contain {
+       grid-column: 1 / 4;
+       grid-row: 2 / 3;
+       width: 65vw;
+       min-height: 80vh;
+     }
 
-.subtitle-container .main-title {
-  font-size: 3rem;
-  font-family: Nordique Pro;
-  font-weight: 600;
-  display: inline-block;
-  margin: 0;
-}
+     .shape-contain .shape {
+       top: 20%;
+       bottom: auto;
+     }
 
-.subtitle-container .subtitle {
-  font-size: 3rem;
-  font-family: Nordique Pro;
-  font-weight: 400;
-  padding-left: 0.75rem;
-  display: inline-block;
-  margin: 0;
-}
+     .main-container {
+       grid-column-gap: 14px;
+       grid-template-columns: min-content 1fr 1fr;
+     }
+
+     .subtitle-container {
+       margin-block-start: 1em;
+       margin-block-end: 1em;
+     }
+
+     .subtitle-container .main-title{
+       font-size: 1.5rem
+     }
+
+     .subtitle-container .subtitle {
+       font-size: 1.5rem;
+       padding-left: 0.75rem;
+     }
+
+     .subtitle-container .subtitle{
+       font-size: 1.5rem;
+       padding-left: 0;
+     }
+
+     #sub-default{
+       display: inline-block;
+     }
+   }
+
+   @media only screen and (min-width: 768px){
+      /* For desktop: */
+      .main-container {
+        grid-template-columns: 1fr auto 1fr;
+        padding: 40px;
+      }
+
+      .shape-contain {
+        width: 40vw;
+        min-height: 80vh;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+      .shape-contain .shape {
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: -6%;
+      }
+
+      .subtitle-container {
+        margin: 0;
+      }
+
+      .subtitle-container .main-title {
+        font-size: 3rem;
+      }
+
+      .subtitle-container .subtitle{
+        font-size: 3rem;
+        padding-left: 0.75rem;
+      }
+
+      #main-blurb {
+         margin: 0;
+        padding-top: 1rem;
+      }
+       #sub-default{
+         display: inline-block;
+       }
+
+      #mobile-nav {
+        display: none !important;
+      }
+   }
 
 #mobile-nav {
   grid-column: 1/4;
@@ -147,51 +259,6 @@ textarea {
   display: block;
   text-decoration: none;
   color: #005EB8;
-}
-
-@media only screen and (max-width: 501px) {
-  .shape-contain {
-    grid-column: 1/4;
-    width: 65vw;
-  }
-
-  .shape-contain .shape {
-    display: block;
-    position: absolute;
-    top: 30%;
-  }
-
-  .main-container {
-    grid-column-gap: 14px;
-    grid-template-columns: min-content 1fr 1fr;
-    grid-template-rows: 50px 1fr;
-  }
-
-  .subtitle-container {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-  }
-
-  .subtitle-container .main-title{
-    font-size: 1.5rem
-  }
-
-  .subtitle-container .subtitle{
-    font-size: 1.5rem;
-    padding-left: 0;
-  }
-
-  #sub-default{
-    display: none;
-  }
-}
-
-#main-blurb{
-  grid-column: 3 / 4;
-  font-size: 0.85rem;
-  font-family: Nordique Pro;
-  font-weight: 400;
-  padding-top: 0.75vh;
 }
 
 
@@ -294,6 +361,10 @@ textarea {
 #qrtr-circ.qrtrhover{
   fill: #E26F3B;
 }
+
+
+
+
 
 
 
