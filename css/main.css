@@ -103,7 +103,53 @@ textarea {
   bottom: -5%;
 }
 
-@media only screen and (max-width: 701px) {
+.subtitle-container {
+  grid-column: 2 / 3;
+  display: inline-block;
+}
+
+.subtitle-container .main-title, .subtitle-container .subtitle{
+  display: inline;
+}
+
+.subtitle-container .main-title {
+  font-size: 3rem;
+  font-family: Nordique Pro;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0;
+}
+
+.subtitle-container .subtitle {
+  font-size: 3rem;
+  font-family: Nordique Pro;
+  font-weight: 400;
+  padding-left: 0.75rem;
+  display: inline-block;
+  margin: 0;
+}
+
+#mobile-nav {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-self: end;
+  padding-top: 2rem;
+}
+
+#mobile-nav a {
+  font-size: 1.25rem;
+  font-family: Nordique Pro;
+  font-weight: 400;
+  display: inline-block;
+  padding-right: 2.5rem;
+  text-decoration: none;
+  color: #005EB8;
+}
+
+@media only screen and (max-width: 501px) {
   .shape-contain {
     grid-column: 1/4;
     width: 60vw;
@@ -130,35 +176,14 @@ textarea {
     font-size: 1.5rem
   }
 
-  .subtitle-container .main-title{
-    font-size: 1.5rem
+  .subtitle-container .subtitle{
+    font-size: 1.5rem;
+    padding-left: 0;
   }
-}
 
-.subtitle-container {
-  grid-column: 2 / 3;
-  display: inline-block;
-}
-
-.subtitle-container .main-title, .subtitle-container .subtitle{
-  display: inline;
-}
-
-.subtitle-container .main-title {
-  font-size: 3rem;
-  font-family: Nordique Pro;
-  font-weight: 600;
-  display: inline-block;
-  margin: 0;
-}
-
-.subtitle-container .subtitle {
-  font-size: 3rem;
-  font-family: Nordique Pro;
-  font-weight: 400;
-  padding-left: 0.75rem;
-  display: inline-block;
-  margin: 0;
+  #sub-default{
+    display: none;
+  }
 }
 
 #main-blurb{
