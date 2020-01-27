@@ -4,13 +4,24 @@ $(document).ready(function(){
   const semicirc = $("#semi-circ").get();
   const qrtrcirc = $("#qrtr-circ").get();
   const arrow = $("#arrow-path").get();
+  const $shapeArray = document.querySelectorAll(".shapepath");
   var speakersList = document.querySelectorAll(".speaker");
+  var initTL = new TimelineLite();
+
+  function initAnimation() {
+    for(let i=0; i<$shapeArray.length; i++){
+      initTL.from($shapeArray[i], 0.4, {opacity: 0});
+    }
+  }
+
+  initAnimation();
 
   $("#full-circ").hover(function(){
     $(this).toggleClass("fullhover");
     $(pacman).toggleClass("fullhover");
     $(semicirc).toggleClass("fullhover");
     $(qrtrcirc).toggleClass("fullhover");
+    $("#sub-default").toggleClass("hidden");
     $("#sub-tickets").toggleClass("hidden");
   });
 
@@ -19,6 +30,7 @@ $(document).ready(function(){
     $(fullcirc).toggleClass("pachover");
     $(semicirc).toggleClass("pachover");
     $(qrtrcirc).toggleClass("pachover");
+    $("#sub-default").toggleClass("hidden");
     $("#sub-interviews").toggleClass("hidden");
   });
 
@@ -27,6 +39,7 @@ $(document).ready(function(){
     $(fullcirc).toggleClass("semihover");
     $(pacman).toggleClass("semihover");
     $(qrtrcirc).toggleClass("semihover");
+    $("#sub-default").toggleClass("hidden");
     $("#sub-volunteer").toggleClass("hidden");
   });
 
@@ -35,6 +48,7 @@ $(document).ready(function(){
     $(pacman).toggleClass("qrtrhover");
     $(semicirc).toggleClass("qrtrhover");
     $(fullcirc).toggleClass("qrtrhover");
+    $("#sub-default").toggleClass("hidden");
     $("#sub-info").toggleClass("hidden");
   });
 

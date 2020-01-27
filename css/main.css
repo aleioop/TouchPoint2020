@@ -76,8 +76,7 @@ textarea {
 
 .main-container {
   display: grid;
-  grid-column-gap: 23px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 50px 1fr;
   padding: 40px;
   width: 100%;
@@ -101,32 +100,44 @@ textarea {
 .shape-contain .shape {
   display: block;
   position: absolute;
-  bottom: -10%;
-  height: auto;
+  bottom: -5%;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 701px) {
   .shape-contain {
     grid-column: 1/4;
-    width: 50vw;
-    max-height: 40vh;
+    width: 60vw;
   }
 
   .shape-contain .shape {
     display: block;
     position: absolute;
-    bottom: -8%;
+    top: 30%;
   }
 
   .main-container {
     grid-column-gap: 14px;
-    grid-template-columns: 1fr 50% 1fr;
+    grid-template-columns: min-content 1fr 1fr;
     grid-template-rows: 50px 1fr;
+  }
+
+  .subtitle-container {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+  .subtitle-container .main-title{
+    font-size: 1.5rem
+  }
+
+  .subtitle-container .main-title{
+    font-size: 1.5rem
   }
 }
 
 .subtitle-container {
-  grid-column: 2/3;
+  grid-column: 2 / 3;
+  display: inline-block;
 }
 
 .subtitle-container .main-title, .subtitle-container .subtitle{
@@ -134,25 +145,28 @@ textarea {
 }
 
 .subtitle-container .main-title {
-  font-size: 3.25vw;
+  font-size: 3rem;
   font-family: Nordique Pro;
   font-weight: 600;
+  display: inline-block;
+  margin: 0;
 }
 
 .subtitle-container .subtitle {
-  font-size: 3.25vw;
+  font-size: 3rem;
   font-family: Nordique Pro;
   font-weight: 400;
-  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  display: inline-block;
+  margin: 0;
 }
 
 #main-blurb{
   grid-column: 3 / 4;
-  font-size: 1vw;
+  font-size: 0.85rem;
   font-family: Nordique Pro;
   font-weight: 400;
   padding-top: 0.75vh;
-  padding-right: 0.1vw;
 }
 
 
