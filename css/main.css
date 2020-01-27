@@ -193,8 +193,33 @@ textarea {
        display: inline-block;
      }
    }
+   @media only screen and (min-width: 768px) {
 
-   @media only screen and (min-width: 768px){
+     .shape-contain .shape {
+       top: 10%;
+       bottom: auto;
+     }
+
+     .subtitle-container {
+       margin-block-start: 0.5rem;
+     }
+
+     .subtitle-container .main-title {
+       font-size: 2.5rem;
+     }
+
+     .subtitle-container .subtitle{
+       font-size: 2.5rem;
+       padding-left: 0.5rem;
+     }
+
+     #main-blurb {
+      margin: 0;
+       padding-top: 1rem;
+     }
+   }
+
+   @media only screen and (min-width: 975px){
       /* For desktop: */
       .main-container {
         grid-template-columns: 1fr auto 1fr;
@@ -280,18 +305,22 @@ textarea {
 
 #full-circ {
   fill: #0093DA;
+  transition: fill 0.19s ease-in;
 }
 
 #pacman {
   fill: #005EB8;
+  transition: fill 0.19s ease-in;
 }
 
 #semi-circ{
-  fill: #DB3EB1
+  fill: #DB3EB1;
+  transition: fill 0.19s ease-in;
 }
 
 #qrtr-circ{
   fill: #FF6720;
+  transition: fill 0.19s ease-in;
 }
 
 /* outer hover */
