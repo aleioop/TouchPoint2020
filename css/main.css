@@ -15,6 +15,10 @@
   font-family: Nordique Pro Semibold;
   src: url(../assets/fonts/NordiquePro-Semibold.otf);
 }
+@font-face {
+  font-family: Futura PT Light;
+  src: url(../assets/fonts/FuturaPT_Light.otf);
+}
 
 * {
   box-sizing: border-box;
@@ -153,7 +157,7 @@ textarea {
    #main-blurb{
      grid-column: 3 / 4;
      font-size: 0.9rem;
-     font-family: Nordique Pro Light;
+     font-family: Futura PT Light;
      font-weight: 400;
    }
 
