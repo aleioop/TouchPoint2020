@@ -298,8 +298,8 @@ textarea {
 
 #mobile-nav a {
   font-size: 1.25rem;
-  font-family: Nordique Pro;
-  font-weight: 600;
+  font-family: Futura PT Light;
+  text-transform: lowercase;
   display: block;
   text-decoration: none;
   color: #005EB8;
