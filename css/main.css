@@ -159,6 +159,7 @@ textarea {
      font-size: 0.9rem;
      font-family: Futura PT Light;
      font-weight: 400;
+     text-transform: lowercase;
    }
 
    #sub-default{
