@@ -7,6 +7,21 @@ $(document).ready(function(){
   const $shapeArray = document.querySelectorAll(".shapepath");
   var speakersList = document.querySelectorAll(".speaker");
   var initTL = new TimelineLite();
+  var controller = new ScrollMagic.Controller();
+
+  var horizontalScroll = new TimelineMax().to("#js-container", 1, {x: "-50%"})
+
+
+  var hzScene = new ScrollMagic.Scene({
+     triggerElement: "#main-container",
+     triggerHook: "onLeave",
+     duration: "400%"
+   });
+
+  hzScene.setPin("#main-container");
+  hzScene.setTween(horizontalScroll);
+  hzScene.addTo(controller);
+
 
   function initAnimation() {
     for(let i=0; i<$shapeArray.length; i++){
@@ -52,6 +67,8 @@ $(document).ready(function(){
 
   initAnimation();
   initHovers();
+
+
 
 
 });
