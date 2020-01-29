@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: Nordique Pro Bold;
   src: url(../assets/fonts/NordiquePro-Bold.otf);
@@ -18,6 +19,7 @@
   font-family: Futura PT Light;
   src: url(../assets/fonts/FuturaPT_Light.otf);
 }
+
 * {
   box-sizing: border-box;
 }
@@ -41,6 +43,7 @@ html {
 /*
  * A better looking default horizontal rule
  */
+
 hr {
   display: block;
   height: 1px;
@@ -55,6 +58,7 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
+
 audio,
 canvas,
 iframe,
@@ -77,6 +81,7 @@ textarea {
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -87,265 +92,269 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.splash-container {
-  display: grid;
-  grid-column-gap: 14px;
-  grid-template-columns: min-content 1fr 1fr;
-  grid-template-rows: 50px 1fr;
-  padding: 40px;
-  width: 100%;
-  height: 100vh;
-}
+   .splash-container {
+     display: grid;
+     grid-column-gap: 14px;
+     grid-template-columns: min-content 1fr 1fr;
+     grid-template-rows: 50px 1fr;
+     padding: 40px;
+     width: 100%;
+     height: 100vh;
+   }
 
-.shape-contain {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 65vw;
-  min-height: 80vh;
-  grid-column: 1/4;
-  grid-row: 2/3;
-  justify-self: center;
-  align-self: end;
-  position: relative;
-}
+   .shape-contain {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     width: 65vw;
+     min-height: 80vh;
+     grid-column: 1 / 4;
+     grid-row: 2 / 3;
+     justify-self: center;
+     align-self: end;
+     position: relative;
+   }
 
-.shape-contain .shape {
-  display: block;
-  position: absolute;
-  top: 30%;
-  bottom: auto;
-}
+   .shape-contain .shape {
+     display: block;
+     position: absolute;
+     top: 30%;
+     bottom: auto;
+   }
 
-.shape a:hover, .shape a:active, .shape a:focus {
-  outline: 0;
-}
+   .shape a:hover, .shape a:active, .shape a:focus {
+      outline: 0;
+   }
 
-.subtitle-container {
-  grid-column: 2/3;
-  display: inline-block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
+   .subtitle-container {
+     grid-column: 2 / 3;
+     display: inline-block;
+     margin-block-start: 1em;
+     margin-block-end: 1em;
+   }
 
-.subtitle-container .main-title, .subtitle-container .subtitle {
-  display: inline;
-}
+   .subtitle-container .main-title, .subtitle-container .subtitle{
+     display: inline;
+   }
 
-.subtitle-container .main-title {
-  font-size: 1.5rem;
-  font-family: Nordique Pro Semibold;
-  font-weight: 400;
-  display: inline-block;
-  margin: 0;
-}
+   .subtitle-container .main-title {
+     font-size: 1.5rem;
+     font-family: Nordique Pro Semibold;
+     font-weight: 400;
+     display: inline-block;
+     margin: 0;
+   }
 
-.subtitle-container .subtitle {
-  font-size: 1.5rem;
-  font-family: Nordique Pro Light;
-  font-weight: 400;
-  display: inline-block;
-  margin: 0;
-}
+   .subtitle-container .subtitle {
+     font-size: 1.5rem;
+     font-family: Nordique Pro Light;
+     font-weight: 400;
+     display: inline-block;
+     margin: 0;
+   }
 
-#main-blurb {
-  grid-column: 3/4;
-  font-size: 0.9rem;
-  font-family: Futura PT Light;
-  font-weight: 400;
-}
 
-#sub-default {
-  display: none;
-}
+   #main-blurb{
+     grid-column: 3 / 4;
+     font-size: 0.9rem;
+     font-family: Futura PT Light;
+     font-weight: 400;
+   }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .splash-container {
-    grid-template-columns: 1fr auto 1fr;
-    padding: 40px;
-  }
+   #sub-default{
+     display: none;
+   }
 
-  .shape-contain {
-    grid-column: 1/4;
-    grid-row: 2/3;
-    width: 65vw;
-    min-height: 80vh;
-  }
+   @media only screen and (min-width: 600px) {
+     /* For tablets: */
+     .splash-container {
+       grid-template-columns: 1fr auto 1fr;
+       padding: 40px;
+     }
 
-  .shape-contain .shape {
-    top: 20%;
-    bottom: auto;
-  }
+     .shape-contain {
+       grid-column: 1 / 4;
+       grid-row: 2 / 3;
+       width: 65vw;
+       min-height: 80vh;
+     }
 
-  .splash-container {
-    grid-column-gap: 14px;
-    grid-template-columns: min-content 1fr 1fr;
-  }
+     .shape-contain .shape {
+       top: 20%;
+       bottom: auto;
+     }
 
-  .subtitle-container {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-  }
+     .splash-container {
+       grid-column-gap: 14px;
+       grid-template-columns: min-content 1fr 1fr;
+     }
 
-  .subtitle-container .main-title {
-    font-size: 1.5rem;
-  }
+     .subtitle-container {
+       margin-block-start: 1em;
+       margin-block-end: 1em;
+     }
 
-  .subtitle-container .subtitle {
-    font-size: 1.5rem;
-    padding-left: 0.75rem;
-  }
+     .subtitle-container .main-title{
+       font-size: 1.5rem
+     }
 
-  .subtitle-container .subtitle {
-    font-size: 1.5rem;
-    padding-left: 0;
-  }
+     .subtitle-container .subtitle {
+       font-size: 1.5rem;
+       padding-left: 0.75rem;
+     }
 
-  #sub-default {
-    display: inline-block;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .shape-contain .shape {
-    top: 10%;
-    bottom: auto;
-  }
+     .subtitle-container .subtitle{
+       font-size: 1.5rem;
+       padding-left: 0;
+     }
 
-  .subtitle-container {
-    margin-block-start: 0.5rem;
-  }
+     #sub-default{
+       display: inline-block;
+     }
+   }
+   @media only screen and (min-width: 768px) {
 
-  .subtitle-container .main-title {
-    font-size: 2.5rem;
-  }
+     .shape-contain .shape {
+       top: 10%;
+       bottom: auto;
+     }
 
-  .subtitle-container .subtitle {
-    font-size: 2.5rem;
-    padding-left: 0.5rem;
-  }
+     .subtitle-container {
+       margin-block-start: 0.5rem;
+     }
 
-  #main-blurb {
-    margin: 0;
-    padding-top: 1rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  /* For desktop: */
-  .main-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    perspective: 1000;
-  }
+     .subtitle-container .main-title {
+       font-size: 2.5rem;
+     }
 
-  .main-container .sections {
-    width: 200%;
-    height: 100%;
-  }
+     .subtitle-container .subtitle{
+       font-size: 2.5rem;
+       padding-left: 0.5rem;
+     }
 
-  .splash-container {
-    grid-template-columns: 1fr auto 1fr;
-    padding: 40px;
-  }
+     #main-blurb {
+      margin: 0;
+       padding-top: 1rem;
+     }
+   }
 
-  .shape-contain {
-    width: 40vw;
-    min-height: 80vh;
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
+   @media only screen and (min-width: 1024px){
+      /* For desktop: */
 
-  .shape-contain .shape {
-    display: block;
-    position: absolute;
-    top: auto;
-    bottom: -6%;
-  }
 
-  .subtitle-container {
-    margin: 0;
-  }
+      .main-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        perspective: 1000;
+      }
 
-  .subtitle-container .main-title {
-    font-size: 3rem;
-  }
+      .main-container .sections{
+        width: percentage(2);
+        height: 100%;
+      }
 
-  .subtitle-container .subtitle {
-    font-size: 3rem;
-    padding-left: 0.75rem;
-  }
+      .splash-container {
+        grid-template-columns: 1fr auto 1fr;
+        padding: 40px;
+      }
 
-  #main-blurb {
-    margin: 0;
-    padding-top: 1rem;
-  }
+      .shape-contain {
+        width: 40vw;
+        min-height: 80vh;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
 
-  #sub-default {
-    display: inline-block;
-  }
+      .shape-contain .shape {
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: -6%;
+      }
 
-  #mobile-nav {
-    display: none !important;
-  }
+      .subtitle-container {
+        margin: 0;
+      }
 
-  .speakers-container {
-    display: grid;
-    grid-column-gap: 12px;
-    grid-template-columns: repeat(6, 1fr);
-    padding: 40px;
-    width: 100%;
-    height: 100vh;
-  }
+      .subtitle-container .main-title {
+        font-size: 3rem;
+      }
 
-  .speakers-container .featured-subheader {
-    font-weight: 500;
-    text-transform: capitalize;
-    font-size: 1.35vw;
-    margin-bottom: 0.25rem;
-  }
+      .subtitle-container .subtitle{
+        font-size: 3rem;
+        padding-left: 0.75rem;
+      }
 
-  .speakers-container .speaker-list-wrapper {
-    display: block;
-    width: 100%;
-    height: 100%;
-    grid-column: 1/4;
-    /* transform: rotate(-90deg); */
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    font-family: Futura PT;
-  }
+      #main-blurb {
+         margin: 0;
+        padding-top: 1rem;
+      }
+       #sub-default{
+         display: inline-block;
+       }
 
-  .featured-subheader {
-    margin-right: 1.25vw;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-  }
+      #mobile-nav {
+        display: none !important;
+      }
 
-  .speakers-container .speaker-box {
-    margin-right: 1.25vw;
-    writing-mode: vertical-lr;
-    height: 90%;
-    transform: rotate(180deg);
-  }
+      .speakers-container{
+        display: grid;
+        grid-column-gap: 12px;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 40px;
+        width: 100%;
+        height: 100vh;
+      }
 
-  .speakers-container .speaker-box h2 {
-    font-weight: 500;
-    font-size: 3.5vw;
-    margin: 0;
-    line-height: 1;
-  }
+      .speakers-container .featured-subheader{
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 1.35vw;
+        margin-bottom: 0.25rem;
+      }
 
-  .speakers-container .speaker-box p {
-    font-weight: 100;
-    font-size: 1.35vw;
-    margin: 0;
-    line-height: 0.5;
-  }
-}
+      .speakers-container .speaker-list-wrapper{
+        display: block;
+        width: 100%;
+        height: 100%;
+        grid-column: 1/4;
+        /* transform: rotate(-90deg); */
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-family: Futura PT;
+      }
+
+      .featured-subheader {
+        margin-right: 1.25vw;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+      }
+
+      .speakers-container .speaker-box{
+        margin-right: 1.25vw;
+        writing-mode: vertical-lr;
+        height: 90%;
+        transform: rotate(180deg);
+      }
+
+      .speakers-container .speaker-box h2{
+        font-weight: 500;
+        font-size: 3.5vw;;
+        margin: 0;
+        line-height: 1;
+      }
+      .speakers-container .speaker-box p{
+        font-weight: 100;
+        font-size: 1.35vw;
+        margin: 0;
+        line-height: 0.5;
+      }
+   }
+
 #mobile-nav {
   grid-column: 1/4;
   grid-row: 2/3;
@@ -365,10 +374,11 @@ textarea {
   color: #005EB8;
 }
 
-#mobile-nav a:hover, #mobile-nav a:focus, #mobile-nav a:active {
+#mobile-nav a:hover, #mobile-nav a:focus, #mobile-nav a:active{
   color: #CDD2E9;
   text-decoration: underline;
 }
+
 
 #arrow {
   grid-column: 3/4;
@@ -382,7 +392,7 @@ textarea {
   transform: translateY(50%) translateX(80%);
 }
 
-.arrow-path:hover {
+.arrow-path:hover{
   fill: #555555;
 }
 
@@ -396,12 +406,12 @@ textarea {
   transition: fill 0.19s ease-in;
 }
 
-#semi-circ {
+#semi-circ{
   fill: #DB3EB1;
   transition: fill 0.19s ease-in;
 }
 
-#qrtr-circ {
+#qrtr-circ{
   fill: #FF6720;
   transition: fill 0.19s ease-in;
 }
@@ -411,15 +421,15 @@ textarea {
   fill: #4490CA;
 }
 
-#pacman.fullhover {
+#pacman.fullhover{
   fill: #CDD2E9;
 }
 
-#semi-circ.fullhover {
-  fill: #EAD8E7;
+#semi-circ.fullhover{
+  fill: #EAD8E7
 }
 
-#qrtr-circ.fullhover {
+#qrtr-circ.fullhover{
   fill: #F8DDCA;
 }
 
@@ -428,15 +438,15 @@ textarea {
   fill: #D6E1F2;
 }
 
-#pacman.pachover {
+#pacman.pachover{
   fill: #4E5FAB;
 }
 
-#semi-circ.pachover {
+#semi-circ.pachover{
   fill: #EAD8E7;
 }
 
-#qrtr-circ.pachover {
+#qrtr-circ.pachover{
   fill: #F8DDCA;
 }
 
@@ -445,15 +455,15 @@ textarea {
   fill: #D6E1F2;
 }
 
-#pacman.semihover {
+#pacman.semihover{
   fill: #CDD2E9;
 }
 
-#semi-circ.semihover {
+#semi-circ.semihover{
   fill: #BB5698;
 }
 
-#qrtr-circ.semihover {
+#qrtr-circ.semihover{
   fill: #F8DDCA;
 }
 
@@ -462,24 +472,27 @@ textarea {
   fill: #D6E1F2;
 }
 
-#pacman.qrtrhover {
+#pacman.qrtrhover{
   fill: #CDD2E9;
 }
 
-#semi-circ.qrtrhover {
+#semi-circ.qrtrhover{
   fill: #EAD8E7;
 }
 
-#qrtr-circ.qrtrhover {
+#qrtr-circ.qrtrhover{
   fill: #E26F3B;
 }
+
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 /*
  * Hide visually and from screen readers
  */
+
 .hidden {
   display: none !important;
 }
@@ -492,6 +505,7 @@ textarea {
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -510,6 +524,7 @@ textarea {
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
+
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -524,6 +539,7 @@ textarea {
 /*
 * Hide visually and from screen readers, but maintain layout
 */
+
 .invisible {
   visibility: hidden;
 }
@@ -539,6 +555,7 @@ textarea {
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -551,65 +568,70 @@ textarea {
   clear: both;
 }
 
+
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
+
+
+
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+
 @media print {
   *,
-*:before,
-*:after {
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
-
   a[href]:after {
     content: " (" attr(href) ")";
   }
-
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
   a[href^="#"]:after,
-a[href^="javascript:"]:after {
+  a[href^="javascript:"]:after {
     content: "";
   }
-
   pre {
     white-space: pre-wrap !important;
   }
-
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   /*
      * Printing Tables:
      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -617,23 +639,18 @@ blockquote {
   thead {
     display: table-header-group;
   }
-
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
-
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
