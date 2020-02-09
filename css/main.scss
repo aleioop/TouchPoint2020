@@ -258,6 +258,13 @@ textarea {
        bottom: auto;
      }
 
+     .shape-contain {
+       grid-column: 1 / 4;
+       grid-row: 2 / 3;
+       width: 50vw;
+       min-height: 80vh;
+     }
+
      .subtitle-container {
        margin-block-start: 0.5rem;
      }

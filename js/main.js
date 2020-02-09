@@ -27,7 +27,7 @@ $(document).ready(function(){
      }
    }
 
- var x = window.matchMedia("(min-width: 768px)");
+ var x = window.matchMedia("(min-width: 1024px)");
  horizontalControl(x); // Call listener function at run time
  x.addListener(horizontalControl);// Attach listener function on state changes
 
