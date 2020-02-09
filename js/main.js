@@ -43,22 +43,22 @@ $(document).ready(function(){
 
   function speakerHover() {
     $("#asana").hover(function(){
-      $("#asana-img").toggleClass("hidden");
+      $(".asana-img").toggleClass("hidden");
     });
     $("#telus").hover(function(){
-      $("#telus-img").toggleClass("hidden");
+      $(".telus-img").toggleClass("hidden");
     });
     $("#allpurpose").hover(function(){
-      $("#allpurpose-img").toggleClass("hidden");
+      $(".allpurpose-img").toggleClass("hidden");
     });
     $("#everyday").hover(function(){
-      $("#everyday-img").toggleClass("hidden");
+      $(".everyday-img").toggleClass("hidden");
     });
     $("#dossier").hover(function(){
-      $("#dossier-img").toggleClass("hidden");
+      $(".dossier-img").toggleClass("hidden");
     });
     $("#engine").hover(function(){
-      $("#engine-img").toggleClass("hidden");
+      $(".engine-img").toggleClass("hidden");
     });
   }
 
@@ -101,5 +101,4 @@ $(document).ready(function(){
   initAnimation();
   initHovers();
   speakerHover();
-
 });

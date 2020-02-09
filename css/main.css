@@ -195,6 +195,10 @@ textarea {
   font-weight: 100;
 }
 
+.photo-area {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .splash-container {
@@ -400,34 +404,28 @@ textarea {
     align-items: center;
   }
 
-  .photo-area .speaker-img {
+  .speaker-img {
     box-sizing: border-box;
-    height: 100px;
-    width: 100px;
+    height: auto;
   }
 
-  #asana-img {
-    background-color: pink;
+  .photo-area .asana-img {
+    width: 10rem;
   }
-
-  #telus-img {
-    background-color: purple;
+  .photo-area .telus-img {
+    width: 13rem;
   }
-
-  #allpurpose-img {
-    background-color: blue;
+  .photo-area .allpurpose-img {
+    width: 10rem;
   }
-
-  #everyday-img {
-    background-color: black;
+  .photo-area .everyday-img {
+    width: 11rem;
   }
-
-  #engine-img {
-    background-color: green;
+  .photo-area .engine-img {
+    width: 13rem;
   }
-
-  #dossier-img {
-    background-color: red;
+  .photo-area .dossier-img {
+    width: 200px;
   }
 }
 #mobile-nav {
