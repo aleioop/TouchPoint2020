@@ -284,20 +284,19 @@ textarea {
 @media only screen and (min-width: 1024px) {
   /* For desktop: */
   .main-container {
-    width: 100%;
-    height: 100%;
+    width: 200vw;
+    height: 100vh;
     overflow-y: hidden;
-    perspective: 1000;
   }
 
   .main-container .sections {
-    width: 200%;
+    width: 200vw;
     height: 100%;
   }
 
   .main-container .sections .section {
     height: 100%;
-    width: calc(100%/ 2);
+    width: 100vw;
     float: left;
   }
 
@@ -334,7 +333,7 @@ textarea {
     padding-left: 0.75rem;
   }
 
-  #arrow {
+  #arrowhold {
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: center;
@@ -465,7 +464,7 @@ textarea {
     overflow: hidden;
     width: 3rem;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;

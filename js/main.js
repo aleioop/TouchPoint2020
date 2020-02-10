@@ -6,34 +6,7 @@ $(document).ready(function(){
   const arrow = $("#arrow-path").get();
   const $shapeArray = document.querySelectorAll(".shapepath");
   var speakersList = document.querySelectorAll(".speaker");
-  var initTL = new TimelineLite();
-  var controller = new ScrollMagic.Controller();
-  var horizontalScroll = new TimelineMax().to("#js-container", 1, {x: "-50%"});
-
-
-  var hzScene = new ScrollMagic.Scene({
-     triggerElement: "#main-container",
-     triggerHook: "onLeave",
-     duration: "400%"
-   });
-
-  function horizontalControl(x) {
-     if (x.matches) { // If media query matches
-       hzScene.setPin("#main-container");
-       hzScene.setTween(horizontalScroll);
-       hzScene.addTo(controller);
-     } else {
-       horizontalScroll.kill();
-     }
-   }
-
- var x = window.matchMedia("(min-width: 1024px)");
- horizontalControl(x); // Call listener function at run time
- x.addListener(horizontalControl);// Attach listener function on state changes
-
-
-
-
+  var initTL = new TimelineMax();
 
   function initAnimation() {
     for(let i=0; i<$shapeArray.length; i++){
@@ -68,6 +41,15 @@ $(document).ready(function(){
   $("#full-circ, #pacman, #semi-circ, #qrtr-circ").mouseleave(function(){
     $("#sub-header").addClass("hidden");
   });
+
+  $("#arrow").click(function(){
+    gsap.to(window, {duration: 0.75, ease: "power2", scrollTo: {x: "#speaker-js"}});
+  });
+
+  $("#nav-icon").click(function(){
+    gsap.to(window, {duration: 0.75, ease: "power2", scrollTo: {x: 0}});
+  });
+
 
   function initHovers() {
     setTimeout(function(){
@@ -141,7 +123,9 @@ $(document).ready(function(){
     }, 1400);
   }
 
+  gsap.registerPlugin(ScrollToPlugin);
   initAnimation();
   initHovers();
   speakerHover();
+
 });
