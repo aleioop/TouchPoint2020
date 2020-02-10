@@ -185,7 +185,7 @@ textarea {
      flex-direction: column;
      align-items: flex-start;
      justify-content: flex-start;
-     font-family: Futura PT;
+     font-family: Futura PT, sans-serif;
    }
 
    .speaker-list-wrapper .speaker-box{
@@ -203,6 +203,7 @@ textarea {
      margin: 0;
      line-height: 1;
      font-weight: 100;
+     font-family: Futura PT Light, Helvetica, sans-serif;
    }
 
    .photo-area{
@@ -432,7 +433,7 @@ textarea {
         font-weight: 100;
         font-size: 1.35vw;
         margin: 0;
-        line-height: .55;
+        line-height: 1;
       }
 
       .speakers-container .photo-area{
