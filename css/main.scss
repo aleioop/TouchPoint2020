@@ -342,6 +342,25 @@ textarea {
         padding-left: 0.75rem;
       }
 
+
+      #arrow {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        align-self: center;
+      }
+
+      .arrow-path {
+        fill: white;
+        stroke: black;
+        transform-origin: right;
+        transform: translateY(50%) translateX(80%);
+      }
+
+      .arrow-path:hover{
+        stroke: #DB3EB1;
+        stroke-width: 0.15rem;
+      }
+
       #main-blurb {
          margin: 0;
         padding-top: 1rem;
@@ -505,23 +524,6 @@ textarea {
 #mobile-nav a:hover, #mobile-nav a:focus, #mobile-nav a:active{
   color: #CDD2E9;
   text-decoration: underline;
-}
-
-
-#arrow {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  align-self: center;
-}
-
-.arrow-path {
-  fill: white;
-  transform-origin: right;
-  transform: translateY(50%) translateX(80%);
-}
-
-.arrow-path:hover{
-  fill: #555555;
 }
 
 #full-circ {
