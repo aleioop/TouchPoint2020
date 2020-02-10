@@ -61,40 +61,83 @@ $(document).ready(function(){
       $(".engine-img").toggleClass("hidden");
     });
   }
+  $("#full-circ, #pacman, #semi-circ, #qrtr-circ").mouseover(function(){
+    $("#sub-header").removeClass("hidden");
+  });
+
+  $("#full-circ, #pacman, #semi-circ, #qrtr-circ").mouseleave(function(){
+    $("#sub-header").addClass("hidden");
+  });
 
   function initHovers() {
     setTimeout(function(){
-      $("#full-circ").hover(function(){
-        $("#sub-tickets").toggleClass("hidden");
-        $(this).toggleClass("fullhover");
-        $(pacman).toggleClass("fullhover");
-        $(semicirc).toggleClass("fullhover");
-        $(qrtrcirc).toggleClass("fullhover");
-      });
+      $("#full-circ").hover(
+        function(){
+          $(this).addClass("fullhover");
+          $(pacman).addClass("fullhover");
+          $(semicirc).addClass("fullhover");
+          $(qrtrcirc).addClass("fullhover");
+          $("#sub-header").html("buy tickets");
+        },
+        function(){
+          $(this).removeClass("fullhover");
+          $(pacman).removeClass("fullhover");
+          $(semicirc).removeClass("fullhover");
+          $(qrtrcirc).removeClass("fullhover");
+          $("#sub-header").html("");
+        }
+    );
 
-      $("#pacman").hover(function(){
-        $(this).toggleClass("pachover");
-        $(fullcirc).toggleClass("pachover");
-        $(semicirc).toggleClass("pachover");
-        $(qrtrcirc).toggleClass("pachover");
-        $("#sub-interviews").toggleClass("hidden");
-      });
+      $("#pacman").hover(
+        function(){
+          $(this).addClass("pachover");
+          $(fullcirc).addClass("pachover");
+          $(semicirc).addClass("pachover");
+          $(qrtrcirc).addClass("pachover");
+          $("#sub-header").html("interview");
+        },
+        function(){
+          $(this).removeClass("pachover");
+          $(fullcirc).removeClass("pachover");
+          $(semicirc).removeClass("pachover");
+          $(qrtrcirc).removeClass("pachover");
+          $("#sub-header").html("");
+        }
+    );
 
-      $("#semi-circ").hover(function(){
-        $(this).toggleClass("semihover");
-        $(fullcirc).toggleClass("semihover");
-        $(pacman).toggleClass("semihover");
-        $(qrtrcirc).toggleClass("semihover");
-        $("#sub-volunteer").toggleClass("hidden");
-      });
+      $("#semi-circ").hover(
+        function(){
+          $(this).addClass("semihover");
+          $(fullcirc).addClass("semihover");
+          $(pacman).addClass("semihover");
+          $(qrtrcirc).addClass("semihover");
+          $("#sub-header").html("volunteer");
+        },
+        function(){
+          $(this).removeClass("semihover");
+          $(fullcirc).removeClass("semihover");
+          $(pacman).removeClass("semihover");
+          $(qrtrcirc).removeClass("semihover");
+          $("#sub-header").html("");
+        }
+      );
 
-      $("#qrtr-circ").hover(function(){
-        $(this).toggleClass("qrtrhover");
-        $(pacman).toggleClass("qrtrhover");
-        $(semicirc).toggleClass("qrtrhover");
-        $(fullcirc).toggleClass("qrtrhover");
-        $("#sub-info").toggleClass("hidden");
-      });
+      $("#qrtr-circ").hover(
+        function(){
+          $(this).addClass("qrtrhover");
+          $(pacman).addClass("qrtrhover");
+          $(semicirc).addClass("qrtrhover");
+          $(fullcirc).addClass("qrtrhover");
+          $("#sub-header").html("more info");
+        },
+        function(){
+          $(this).removeClass("qrtrhover");
+          $(pacman).removeClass("qrtrhover");
+          $(semicirc).removeClass("qrtrhover");
+          $(fullcirc).removeClass("qrtrhover");
+          $("#sub-header").html("");
+        }
+    );
     }, 1400);
   }
 
