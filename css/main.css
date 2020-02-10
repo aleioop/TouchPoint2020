@@ -199,6 +199,10 @@ textarea {
   display: none;
 }
 
+.ws-side-nav {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .splash-container {
@@ -433,6 +437,36 @@ textarea {
   }
   .photo-area .dossier-img {
     width: 200px;
+  }
+
+  .ws-side-nav {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 3rem;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+  }
+  .ws-side-nav a {
+    color: #005EB8;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-bottom: 2rem;
+    font-family: Futura PT;
+    text-decoration: none;
+  }
+  .ws-side-nav span {
+    margin-top: 2rem;
+  }
+  .ws-side-nav a:hover {
+    color: #DB3EB1;
+    text-decoration: underline;
   }
 }
 #mobile-nav {
