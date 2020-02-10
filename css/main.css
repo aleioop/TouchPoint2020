@@ -437,6 +437,46 @@ textarea {
     align-items: center;
   }
 
+  .schedule-container {
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    margin-top: 6rem;
+  }
+  .schedule-container h3 {
+    font-family: Futura PT;
+    font-weight: 400;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  .schedule {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .schedule .schedule-item {
+    margin: 0.25rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+  }
+  .schedule .schedule-item p {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  .schedule .schedule-item .item-header {
+    font-family: Futura PT Light;
+  }
+  .schedule .schedule-item .item-time {
+    font-family: Futura PT Light;
+  }
+  .schedule .schedule-item.gap-item {
+    margin: 1.5rem 0;
+  }
+
   .speaker-img {
     box-sizing: border-box;
     height: auto;

@@ -16,21 +16,27 @@ $(document).ready(function(){
 
   function speakerHover() {
     $("#asana").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".asana-img").toggleClass("hidden");
     });
     $("#telus").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".telus-img").toggleClass("hidden");
     });
     $("#allpurpose").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".allpurpose-img").toggleClass("hidden");
     });
     $("#everyday").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".everyday-img").toggleClass("hidden");
     });
     $("#dossier").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".dossier-img").toggleClass("hidden");
     });
     $("#engine").hover(function(){
+      $("#schedule-box").toggleClass("hidden");
       $(".engine-img").toggleClass("hidden");
     });
   }
