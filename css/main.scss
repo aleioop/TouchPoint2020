@@ -20,11 +20,6 @@
   src: url(../assets/fonts/FuturaPT_Light.otf);
 }
 
-@font-face {
-  font-family: Futura PT;
-  src: url(../assets/fonts/FuturaPT-Medium.otf);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -185,7 +180,8 @@ textarea {
      flex-direction: column;
      align-items: flex-start;
      justify-content: flex-start;
-     font-family: Futura PT, sans-serif;
+     font-family: Futura PT;
+     border-top: 2px solid black;
    }
 
    .speaker-list-wrapper .speaker-box{
@@ -203,18 +199,64 @@ textarea {
      margin: 0;
      line-height: 1;
      font-weight: 100;
-     font-family: Futura PT Light, Helvetica, sans-serif;
    }
 
    .photo-area{
+     height: 100%;
+   }
+
+   .photo-area img{
      display: none;
+   }
+
+   #schedule-box.negate.hidden {
+     display: inline-block !important;
+   }
+
+   .schedule-container {
+     display: inline-block;
+     width: 99%;
+     height: auto;
+     margin-top: 3rem;
+     border-top: 2px solid black;
+   }
+
+   .schedule-container h3 {
+     font-family: Futura PT;
+     font-weight: 400;
+     color: black;
+     font-size: 1.5rem;
+   }
+
+   .schedule {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+   }
+
+   .schedule .schedule-item {
+     margin: 0.25rem 0;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     border-bottom: 1px solid grey;
+   }
+   .schedule .schedule-item p {
+     display: inline-block;
+     margin: 0;
+     font-size: 1.25rem;
+   }
+   .schedule .schedule-item .item-header {
+     font-family: Futura PT Light;
+   }
+   .schedule .schedule-item .item-time {
+     font-family: Futura PT Light;
+   }
+   .schedule .schedule-item.gap-item {
+     margin: 1.5rem 0;
    }
 
    .ws-side-nav {
-     display: none;
-   }
-
-   #arrowhold {
      display: none;
    }
 
@@ -356,7 +398,6 @@ textarea {
         grid-column: 3/4;
         grid-row: 2/3;
         align-self: center;
-        display: block;
       }
 
       .arrow-path {
@@ -388,6 +429,7 @@ textarea {
         grid-column-gap: 12px;
         grid-template-columns: repeat(6, 1fr);
         padding: 40px;
+        border-top: none;
       }
 
       .speakers-container .featured-subheader{
@@ -438,7 +480,7 @@ textarea {
         font-weight: 100;
         font-size: 1.35vw;
         margin: 0;
-        line-height: 1;
+        line-height: .55;
       }
 
       .speakers-container .photo-area{
@@ -455,41 +497,20 @@ textarea {
         width: 70%;
         height: auto;
         margin-top: 6rem;
-        h3 {
-          font-family: Futura PT;
-          font-weight: 400;
-          color: black;
-          font-size: 1.5rem;
-        }
+        border-top: none;
+      }
+
+      .schedule-container h3 {
+        font-family: Futura PT;
+        font-weight: 400;
+        color: black;
+        font-size: 1.5rem;
       }
 
       .schedule {
         list-style: none;
         display: flex;
         flex-direction: column;
-
-        .schedule-item {
-          margin: 0.25rem 0;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          border-bottom: 1px solid grey;
-          p{
-            display: inline-block ;
-            margin: 0;
-            font-size: 1.25rem;
-          }
-          .item-header{
-            font-family: Futura PT Light;
-          }
-          .item-time{
-            font-family: Futura PT Light;
-          }
-        }
-
-        .schedule-item.gap-item {
-          margin: 1.5rem 0;
-        }
       }
 
       .speaker-img{
@@ -498,6 +519,9 @@ textarea {
       }
 
       .photo-area {
+        img {
+          display: block;
+        }
         .asana-img{
           width: 10rem;
         }
@@ -562,7 +586,6 @@ textarea {
   height: 60px;
   justify-content: space-between;
   align-self: end;
-  z-index: 100;
 }
 
 #mobile-nav a {
@@ -679,6 +702,7 @@ textarea {
 .hidden {
   display: none !important;
 }
+
 
 /*
 * Hide only visually, but have it available for screen readers:

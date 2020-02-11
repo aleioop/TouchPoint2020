@@ -14,6 +14,27 @@ $(document).ready(function(){
     }
   }
 
+  function mobileOnly(x) {
+    if (x.matches) { // If media query matches
+      $("#schedule-box").removeClass("negate");
+      speakerHover();
+      initHovers();
+    } else {
+      $("#schedule-box").addClass("negate");
+    }
+  }
+
+
+
+  var x = window.matchMedia("(min-width: 1024px)");
+  mobileOnly(x); // Call listener function at run time
+  $(window).resize(function(){
+    console.log("words");
+    speakerHover();
+    initHovers();
+    mobileOnly(x);
+  });
+
   function speakerHover() {
     $("#asana").hover(function(){
       $("#schedule-box").toggleClass("hidden");
@@ -40,6 +61,7 @@ $(document).ready(function(){
       $(".engine-img").toggleClass("hidden");
     });
   }
+
   $("#full-circ, #pacman, #semi-circ, #qrtr-circ").mouseover(function(){
     $("#sub-header").removeClass("hidden");
   });
@@ -131,7 +153,5 @@ $(document).ready(function(){
 
   gsap.registerPlugin(ScrollToPlugin);
   initAnimation();
-  initHovers();
-  speakerHover();
 
 });
