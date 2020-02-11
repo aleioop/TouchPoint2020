@@ -179,7 +179,6 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  font-family: Futura PT;
   border-top: 2px solid black;
 }
 
@@ -190,14 +189,14 @@ textarea {
 
 .speaker-box h2 {
   margin: 0;
-  line-height: 1.25;
-  font-weight: 500;
+  line-height: 1;
+  font-family: Futura PT;
 }
 
 .speaker-box p {
   margin: 0;
-  line-height: 1;
-  font-weight: 100;
+  line-height: 1.5;
+  font-family: Futura PT Light;
 }
 
 .photo-area {
@@ -470,18 +469,19 @@ textarea {
     margin-bottom: 1.5rem;
   }
 
-  .speakers-container .speaker-box h2 {
+  .speakers-container .speaker-box .title {
+    font-family: Futura PT;
     font-weight: 500;
     font-size: 3.5vw;
-    margin: 0 0.25rem;
+    margin-left: 0.5rem;
     line-height: 1;
   }
 
-  .speakers-container .speaker-box p {
+  .speakers-container .speaker-box .subtitle {
+    font-family: Futura PT Light;
     font-weight: 100;
     font-size: 1.35vw;
-    margin: 0;
-    line-height: 0.55;
+    line-height: 0.75;
   }
 
   .speakers-container .photo-area {
