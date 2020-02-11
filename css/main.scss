@@ -429,7 +429,6 @@ textarea {
         grid-column-gap: 12px;
         grid-template-columns: repeat(6, 1fr);
         padding: 40px;
-        border-top: none;
       }
 
       .speakers-container .featured-subheader{
@@ -449,6 +448,7 @@ textarea {
         align-items: flex-end;
         justify-content: flex-end;
         font-family: Futura PT;
+        border-top: none;
       }
 
       .featured-subheader {
