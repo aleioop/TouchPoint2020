@@ -487,6 +487,7 @@ textarea {
         grid-column: 4 / 7;
         width: 100%;
         height: 100%;
+        padding: none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -494,10 +495,11 @@ textarea {
 
       .schedule-container {
         display: inline-block;
-        width: 70%;
+        width: 75%;
         height: auto;
-        margin-top: 6rem;
         border-top: none;
+        align-self: flex-end;
+        padding-bottom: 1rem;
       }
 
       .schedule-container h3 {
