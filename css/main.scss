@@ -190,7 +190,7 @@ textarea {
 
    .speaker-list-wrapper .speaker-box{
      display: inline-block;
-     margin-bottom: 0.75rem;
+     margin-right: none;
    }
 
    .speaker-box h2{
@@ -462,7 +462,7 @@ textarea {
       }
 
       .speakers-container .speaker-box{
-        margin-right: 1.25vw;
+        padding-right: 1.25vw;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         display: inline-block;
