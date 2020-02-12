@@ -24,8 +24,6 @@ $(document).ready(function(){
     }
   }
 
-
-
   var x = window.matchMedia("(min-width: 1024px)");
   mobileOnly(x); // Call listener function at run time
   $(window).resize(function(){

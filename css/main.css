@@ -163,14 +163,22 @@ textarea {
   display: none;
 }
 
+#arrowhold .arrow-path {
+  display: none;
+}
+
 .speakers-container .side-nav {
-  display: hidden;
+  display: none;
 }
 
 .speakers-container {
   width: 100%;
   height: 100vh;
   padding: 3rem 40px;
+}
+
+.featured-subheader{
+  font-family: Futura PT Light;
 }
 
 .speakers-container .speaker-list-wrapper {
@@ -184,7 +192,8 @@ textarea {
 
 .speaker-list-wrapper .speaker-box {
   display: inline-block;
-  margin-right: none;
+  margin-right: 0;
+  margin-bottom: 1rem;
 }
 
 .speaker-box h2 {
@@ -195,7 +204,7 @@ textarea {
 
 .speaker-box p {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.25;
   font-family: Futura PT Light;
 }
 
@@ -220,10 +229,10 @@ textarea {
 }
 
 .schedule-container h3 {
-  font-family: Futura PT;
+  font-family: Futura PT Light;
   font-weight: 400;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .schedule {
@@ -243,7 +252,7 @@ textarea {
 .schedule .schedule-item p {
   display: inline-block;
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .schedule .schedule-item .item-header {
@@ -393,19 +402,21 @@ textarea {
   }
 
   #arrowhold {
+    display: block;
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: center;
   }
 
-  .arrow-path {
+  #arrowhold .arrow-path{
+    display: block;
     fill: white;
-    stroke: black;
+    stroke: #005EB8;
     transform-origin: right;
     transform: translateY(50%) translateX(80%);
   }
 
-  .arrow-path:hover {
+  #arrowhold .arrow-path:hover {
     stroke: #DB3EB1;
     stroke-width: 0.15rem;
   }
@@ -429,6 +440,7 @@ textarea {
     grid-template-columns: repeat(6, 1fr);
     padding: 40px;
   }
+
 
   .speakers-container .featured-subheader {
     font-weight: 500;
@@ -462,6 +474,8 @@ textarea {
     transform: rotate(180deg);
     display: inline-block;
     align-self: flex-end;
+    min-height: 55%;
+    margin: 0;
     transition: margin-bottom 0.25s ease-out;
   }
 
@@ -473,6 +487,7 @@ textarea {
     font-family: Futura PT;
     font-weight: 500;
     font-size: 3.5vw;
+    margin: 0;
     margin-left: 0.5rem;
     line-height: 1;
   }
